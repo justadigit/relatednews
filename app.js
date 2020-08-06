@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(morgan('dev'));
 
 
-const PORT = 6800 || process.env.PORT ;
+const PORT = process.env.PORT || 6800 ;
 
 mongoose.connect('mongodb+srv://naywin:naywin23@cluster0-urly7.mongodb.net/relatednews?retryWrites=true&w=majority',{ useNewUrlParser: true , useUnifiedTopology: true})
 .then(data=>{

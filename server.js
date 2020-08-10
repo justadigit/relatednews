@@ -44,6 +44,7 @@ app.use((req, res, next) => {
 
 const categoryRouter = require('./api/routes/categories');
 const newsRouter = require('./api/routes/news');
+const userRouter = require('./api/routes/users');
 
 //view engine
 app.set('view engine', 'ejs');
@@ -51,6 +52,7 @@ app.set('view engine', 'ejs');
 //routes
 app.use('/api/categories/', categoryRouter);
 app.use('/api/news/', newsRouter);
+app.use('/api/user/', userRouter);
 
 //Handling error
 app.use((req, res, next) => {

@@ -1,0 +1,1 @@
+GET http://128.199.112.232:6800/api/categories

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const checkAuth = require('../../middleware/check-auth');
+const checkAuth = require('../../middleware/checkAuth');
 const categoriesController = require('../controllers/categories');
 
 router.get('/', categoriesController.index);

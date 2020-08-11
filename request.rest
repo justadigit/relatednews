@@ -1,1 +1,7 @@
-GET http://128.199.112.232:6800/api/categories
+POST http://localhost:6800/api/users/signup
+
+{
+  name:"Mgmg",
+  email:"mgmg@gmail.com",
+  password:"b123",
+}

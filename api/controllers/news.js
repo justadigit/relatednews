@@ -44,7 +44,7 @@ const detail = (req, res) => {
               type: newsdata.categoryId.name,
               updatedAt: newsdata.updatedAt,
             },
-            relatednews: null,
+            relatednews: related,
           });
         });
     })

@@ -34,16 +34,19 @@ const detail = (req, res) => {
               item.categoryId.name == newsdata.categoryId.name
             );
           });
-          const news = {
-            id: newsdata._id,
-            title: newsdata.title,
-            body: newsdata.body,
-            newsImage: newsdata.newsImage,
-            relatedImage: newsdata.relatedImage,
-            type: newsdata.categoryId.name,
-            updatedAt: newsdata.updatedAt,
-          };
-          res.status(200).json([news, related]);
+
+          res.status(200).json({
+            news: {
+              id: newsdata._id,
+              title: newsdata.title,
+              body: newsdata.body,
+              newsImage: newsdata.newsImage,
+              relatedImage: newsdata.relatedImage,
+              type: newsdata.categoryId.name,
+              updatedAt: newsdata.updatedAt,
+            },
+            relatednews: related,
+          });
         });
     })
     .catch((err) => {
